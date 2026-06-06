@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Primet — Graphite Pro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --graphite:#16181C;
+  --raised:#1E2228;
+  --deep:#101216;
+  --text:#F2F3F4;
+  --muted:#9AA0A8;
+  --hair:rgba(255,255,255,0.10);
+  --red:#E0261B;
+  --steel:#3A4453;
+  --glow:0 0 24px rgba(224,38,27,.35);
+  --raised-shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 20px 50px rgba(0,0,0,.5);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--graphite);
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+.wrap{max-width:1440px;margin:0 auto;padding:0 64px}
+.cond{font-family:'Barlow Condensed',sans-serif}
+a{color:inherit;text-decoration:none}
+
+/* ===== TOPBAR ===== */
+.topbar{
+  background:var(--deep);
+  border-bottom:1px solid var(--hair);
+  font-size:12.5px;
+  color:var(--muted);
+}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:38px}
+.topbar .left span{margin-right:18px}
+.topbar .left .sep{color:rgba(255,255,255,.18);margin-right:18px}
+.topbar a:hover{color:var(--text)}
+.lang span{cursor:pointer;padding:0 4px;transition:color .2s}
+.lang span:hover{color:var(--text)}
+.lang .on{color:var(--text);font-weight:600}
+
+/* ===== NAV ===== */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(22,24,28,.82);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--hair);
+}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:26px;letter-spacing:1px}
+.brand .m{color:var(--red);text-shadow:0 0 18px rgba(224,38,27,.55)}
+.nav ul{display:flex;gap:34px;list-style:none}
+.nav ul a{font-size:14.5px;color:var(--muted);font-weight:500;transition:color .2s;position:relative}
+.nav ul a:hover{color:var(--text)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  font-weight:600;font-size:14.5px;border-radius:8px;cursor:pointer;
+  transition:transform .2s,box-shadow .25s,background .2s;border:none;
+}
+.btn-red{background:var(--red);color:#fff;padding:11px 22px;box-shadow:var(--glow)}
+.btn-red:hover{transform:translateY(-2px);box-shadow:0 0 34px rgba(224,38,27,.55)}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--hair);padding:11px 22px}
+.btn-ghost:hover{border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.04)}
+
+/* ===== HERO ===== */
+.hero{
+  position:relative;height:100vh;overflow:hidden;
+  display:flex;align-items:center;
+}
+.hero-img{
+  position:absolute;inset:0;
+  background:url('/photos/hero1.jpg') center/cover no-repeat;
+}
+.hero-grad{
+  position:absolute;inset:0;
+  background:linear-gradient(90deg,#16181C 0%, rgba(22,24,28,.7) 45%, rgba(22,24,28,.15) 100%);
+}
+.hero-grad2{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(22,24,28,.5) 0%, transparent 25%, transparent 55%, #16181C 100%);
+}
+.hero-dots{
+  position:absolute;inset:0;opacity:.4;
+  background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);
+  background-size:26px 26px;
+  mask-image:linear-gradient(90deg,#000 0%,transparent 60%);
+}
+.hero-edge{position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red);box-shadow:0 0 30px rgba(224,38,27,.7)}
+.hero-inner{position:relative;z-index:3;width:100%}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);
+  font-weight:600;margin-bottom:22px;
+}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:var(--glow)}
+.hero h1{
+  font-family:'Barlow Condensed',sans-serif;font-weight:900;
+  font-size:80px;line-height:.92;letter-spacing:-.5px;
+  text-transform:none;margin-bottom:26px;
+}
+.hero h1 .red{color:var(--red);text-shadow:0 0 28px rgba(224,38,27,.5)}
+.hero h1 .mut{color:var(--muted)}
+.hero .sub{font-size:18px;line-height:1.55;color:var(--muted);max-width:540px;margin-bottom:34px}
+.hero-cta{display:flex;gap:14px;margin-bottom:40px}
+.hero-cta .btn{padding:15px 28px;font-size:15px}
+.trust{display:flex;gap:26px;flex-wrap:wrap;font-size:13.5px;color:var(--muted)}
+.trust span{display:inline-flex;align-items:center;gap:8px}
+.trust span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--steel);box-shadow:0 0 8px rgba(58,68,83,.9)}
+
+/* ===== SECTION SHELL ===== */
+section{position:relative}
+.sec-head{text-align:center;margin-bottom:54px}
+.sec-label{font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:var(--red);font-weight:600;margin-bottom:14px}
+.sec-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:48px;line-height:1;letter-spacing:-.5px}
+
+/* ===== STATS ===== */
+.stats{padding:78px 0;border-bottom:1px solid var(--hair)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.stat-card{
+  background:var(--raised);border:1px solid var(--hair);border-radius:14px;padding:30px 28px;
+  box-shadow:var(--raised-shadow);position:relative;overflow:hidden;transition:transform .25s,border-color .25s;
+}
+.stat-card:hover{transform:translateY(-4px);border-color:rgba(224,38,27,.4)}
+.stat-card::before{content:"";position:absolute;top:0;left:0;width:36px;height:3px;background:var(--red);box-shadow:var(--glow)}
+.stat-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:58px;line-height:1;letter-spacing:-1px}
+.stat-num .a{color:var(--red);text-shadow:0 0 20px rgba(224,38,27,.45)}
+.stat-label{font-weight:600;font-size:15px;margin:12px 0 6px}
+.stat-desc{font-size:13px;color:var(--muted);line-height:1.4}
+
+/* ===== INDUSTRIES ===== */
+.ind{padding:96px 0}
+.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ind-card{
+  position:relative;height:320px;border-radius:16px;overflow:hidden;
+  border:1px solid var(--hair);box-shadow:var(--raised-shadow);cursor:pointer;
+  transition:border-color .3s,box-shadow .3s;
+}
+.ind-card .photo{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.ind-card .grad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,18,22,.05) 30%, rgba(16,18,22,.55) 65%, rgba(16,18,22,.94) 100%)}
+.ind-card:hover .photo{transform:scale(1.08)}
+.ind-card:hover{border-color:rgba(224,38,27,.55);box-shadow:0 0 0 1px rgba(224,38,27,.3),0 24px 60px rgba(0,0,0,.6),0 0 40px rgba(224,38,27,.18)}
+.ind-body{position:absolute;left:0;right:0;bottom:0;padding:26px;z-index:2}
+.ind-tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:700;color:#fff;background:var(--red);padding:5px 10px;border-radius:6px;box-shadow:var(--glow);margin-bottom:12px}
+.ind-card h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:30px;line-height:1;margin-bottom:8px}
+.ind-card p{font-size:13.5px;color:var(--muted)}
+
+/* ===== PROCESS ===== */
+.proc{padding:96px 0;background:var(--deep);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.proc-line{position:absolute;top:23px;left:11%;right:11%;height:2px;background:linear-gradient(90deg,rgba(224,38,27,.1),rgba(224,38,27,.55),rgba(224,38,27,.1));box-shadow:0 0 16px rgba(224,38,27,.4);z-index:0}
+.proc-step{position:relative;z-index:1}
+.node{
+  width:46px;height:46px;border-radius:50%;background:var(--raised);border:1px solid rgba(224,38,27,.5);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:18px;color:var(--red);
+  box-shadow:0 0 22px rgba(224,38,27,.4),var(--raised-shadow);margin-bottom:22px;
+}
+.proc-step h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:24px;line-height:1.05;margin-bottom:12px}
+.proc-step p{font-size:14px;color:var(--muted);line-height:1.55}
+
+/* ===== CTA BAND ===== */
+.cta{padding:96px 0}
+.cta-band{
+  position:relative;border-radius:22px;overflow:hidden;padding:64px 60px;
+  background:linear-gradient(120deg,#E0261B 0%, #8E140C 60%, #5A0E08 100%);
+  box-shadow:0 0 60px rgba(224,38,27,.3),var(--raised-shadow);
+  display:flex;align-items:center;justify-content:space-between;gap:40px;
+}
+.cta-band::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:24px 24px;opacity:.5}
+.cta-l{position:relative;z-index:2;max-width:640px}
+.cta-label{font-size:12.5px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.8);margin-bottom:16px}
+.cta-band h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:50px;line-height:1;color:#fff;margin-bottom:16px}
+.cta-band .csub{font-size:16px;color:rgba(255,255,255,.85);line-height:1.5}
+.cta-r{position:relative;z-index:2;text-align:right}
+.cta-phone{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:30px;color:#fff;margin-bottom:18px;letter-spacing:.5px}
+.btn-white{background:#fff;color:var(--deep);padding:15px 30px;font-size:15px;box-shadow:0 14px 36px rgba(0,0,0,.3)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 18px 44px rgba(0,0,0,.4)}
+
+/* ===== FOOTER ===== */
+footer{background:var(--deep);border-top:1px solid var(--hair);padding:70px 0 36px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:54px}
+.foot-brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:32px;letter-spacing:1px;margin-bottom:18px}
+.foot-brand .m{color:var(--red);text-shadow:0 0 18px rgba(224,38,27,.55)}
+.foot-desc{font-size:14px;color:var(--muted);line-height:1.6;max-width:320px}
+.foot-col h4{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--text);margin-bottom:18px;font-weight:600}
+.foot-col a{display:block;font-size:14px;color:var(--muted);margin-bottom:12px;transition:color .2s}
+.foot-col a:hover{color:var(--text)}
+.foot-bottom{border-top:1px solid var(--hair);padding-top:26px;display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}
+
+@media(max-width:1100px){
+  .wrap{padding:0 28px}
+  .stats-grid,.proc-grid{grid-template-columns:repeat(2,1fr)}
+  .ind-grid{grid-template-columns:repeat(2,1fr)}
+  .hero h1{font-size:60px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .cta-band{flex-direction:column;align-items:flex-start;text-align:left}
+  .cta-r{text-align:left}
+  .proc-line{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="left">
+      <a href="mailto:info@primet.lv">info@primet.lv</a>
+      <span class="sep" style="margin-left:18px">·</span>
+      <span>P–Pk</span><span class="sep">·</span><span>08:00–17:00</span>
+    </div>
+    <div class="lang">
+      <span class="on">LV</span><span>EN</span><span>RU</span>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="wrap">
+    <div class="brand">PRI<span class="m">MET</span></div>
+    <ul>
+      <li><a href="#">Iekārtas</a></li>
+      <li><a href="#">Procesi</a></li>
+      <li><a href="#">Par mums</a></li>
+      <li><a href="#">Serviss</a></li>
+    </ul>
+    <a class="btn btn-red" href="#">Sazināties</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-grad"></div>
+  <div class="hero-grad2"></div>
+  <div class="hero-dots"></div>
+  <div class="hero-edge"></div>
+  <div class="hero-inner">
+    <div class="wrap">
+      <div class="eyebrow">Rūpniecisko iekārtu ražošana · kopš 2015</div>
+      <h1 class="cond">Ražojam<br>iekārtas.<br><span class="red">Risinām</span><br><span class="mut">problēmas.</span></h1>
+      <p class="sub">Individuāli konstruētas iekārtas pārtikas rūpniecībai un metālapstrādei. 300+ realizēti projekti Latvijā un Baltijā.</p>
+      <div class="hero-cta">
+        <a class="btn btn-red" href="#">Pieteikties konsultācijai</a>
+        <a class="btn btn-ghost" href="#">Skatīt iekārtas →</a>
+      </div>
+      <div class="trust">
+        <span>HACCP sertificēts</span>
+        <span>Nerūsējošais tērauds</span>
+        <span>Latvijas ražotājs</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num cond">300<span class="a">+</span></div>
+        <div class="stat-label">Realizēti projekti</div>
+        <div class="stat-desc">Pārtikas un metālapstrādes nozarē Baltijā.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num cond">11</div>
+        <div class="stat-label">Gadi nozarē</div>
+        <div class="stat-desc">Pieredze konstruēšanā un ražošanā.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num cond">6<span class="a">+</span></div>
+        <div class="stat-label">Nozares</div>
+        <div class="stat-desc">No zivīm un gaļas līdz kosmētikai.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num cond">24<span class="a">/</span>7</div>
+        <div class="stat-label">Servisa atbalsts</div>
+        <div class="stat-desc">Tehniskā palīdzība jebkurā laikā.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="ind">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-label">Nozares</div>
+      <h2 class="sec-title">Iekārtas katrai nozarei</h2>
+    </div>
+    <div class="ind-grid">
+      <div class="ind-card">
+        <div class="photo" style="background-image:url('/photos/ind-fish.jpg')"></div>
+        <div class="grad"></div>
+        <div class="ind-body"><span class="ind-tag">Pārtika</span><h3 class="cond">Zivju nozare</h3><p>Šķirošana · filēšana · fasēšana · CIP</p></div>
+      </div>
+      <div class="ind-card">
+        <div class="photo" style="background-image:url('/photos/ind-meat.jpg')"></div>
+        <div class="grad"></div>
+        <div class="ind-body"><span class="ind-tag">Pārtika</span><h3 class="cond">Gaļas nozare</h3><p>Griešana · dozēšana · vakuumiepakošana</p></div>
+      </div>
+      <div class="ind-card">
+        <div class="photo" style="background-image:url('/photos/ind-dairy.jpg')"></div>
+        <div class="grad"></div>
+        <div class="ind-body"><span class="ind-tag">Pārtika</span><h3 class="cond">Piena nozare</h3><p>Pildīšana · sterilizācija · CIP/SIP</p></div>
+      </div>
+      <div class="ind-card">
+        <div class="photo" style="background-image:url('/photos/ind-veg.jpg')"></div>
+        <div class="grad"></div>
+        <div class="ind-body"><span class="ind-tag">Pārtika</span><h3 class="cond">Dārzeņu nozare</h3><p>Mazgāšana · šķirošana · dozēšana</p></div>
+      </div>
+      <div class="ind-card">
+        <div class="photo" style="background-image:url('/photos/ind-cosm.jpg')"></div>
+        <div class="grad"></div>
+        <div class="ind-body"><span class="ind-tag">Farmācija</span><h3 class="cond">Kosmētika</h3><p>Tīrās telpas · pildīšana · marķēšana</p></div>
+      </div>
+      <div class="ind-card">
+        <div class="photo" style="background-image:url('/photos/ind-metal.jpg')"></div>
+        <div class="grad"></div>
+        <div class="ind-body"><span class="ind-tag">Rūpniecība</span><h3 class="cond">Metālapstrāde</h3><p>Konstruēšana · CNC · montāža</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="proc">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-label">Process</div>
+      <h2 class="sec-title">No idejas līdz iekārtai</h2>
+    </div>
+    <div class="proc-grid">
+      <div class="proc-line"></div>
+      <div class="proc-step">
+        <div class="node">01</div>
+        <h3 class="cond">Konsultācija</h3>
+        <p>Iepazīstamies ar ražošanas procesu, noskaidrojam prasības un sagatavojam tehniski ekonomisko pamatojumu.</p>
+      </div>
+      <div class="proc-step">
+        <div class="node">02</div>
+        <h3 class="cond">Projektēšana</h3>
+        <p>3D modelēšana un rasējumi saskaņā ar klienta prasībām.</p>
+      </div>
+      <div class="proc-step">
+        <div class="node">03</div>
+        <h3 class="cond">Ražošana</h3>
+        <p>Izgatavošana savā ražotnē no AISI 304/316 nerūsējošā tērauda.</p>
+      </div>
+      <div class="proc-step">
+        <div class="node">04</div>
+        <h3 class="cond">Uzstādīšana un serviss</h3>
+        <p>Piegāde, montāža, darbinieku apmācība un 24/7 tehniskais atbalsts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <div class="cta-band">
+      <div class="cta-l">
+        <div class="cta-label">Sāciet projektu šodien</div>
+        <h2 class="cond">Gatavi uzsākt jūsu projektu?</h2>
+        <p class="csub">Bezmaksas konsultācija · Tehniskais pamatojums · Piegāde Latvijā un Baltijā</p>
+      </div>
+      <div class="cta-r">
+        <div class="cta-phone cond">+371 26 123 456</div>
+        <a class="btn btn-white" href="#">Pieteikties konsultācijai</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">PRI<span class="m">MET</span></div>
+        <p class="foot-desc">SIA Primet — industriālo iekārtu konstruēšana un ražošana pārtikas un farmācijas nozarei kopš 2015. gada.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Iekārtas</h4>
+        <a href="#">Zivju nozare</a>
+        <a href="#">Gaļas nozare</a>
+        <a href="#">Piena nozare</a>
+        <a href="#">Metālapstrāde</a>
+      </div>
+      <div class="foot-col">
+        <h4>Uzņēmums</h4>
+        <a href="#">Par mums</a>
+        <a href="#">Procesi</a>
+        <a href="#">Serviss</a>
+        <a href="#">Kontakti</a>
+      </div>
+      <div class="foot-col">
+        <h4>Kontakti</h4>
+        <a href="mailto:info@primet.lv">info@primet.lv</a>
+        <a href="tel:+37126123456">+371 26 123 456</a>
+        <a href="#">P–Pk · 08:00–17:00</a>
+        <a href="#">Latvija</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2025 SIA Primet · Latvija</span>
+      <span>HACCP sertificēts · Latvijas ražotājs</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

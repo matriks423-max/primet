@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Primet — Steel Editorial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F2EC;
+    --card:#FCFBF8;
+    --ink:#14171C;
+    --sec:#5A5F66;
+    --line:rgba(20,23,28,0.12);
+    --red:#C8102E;
+    --shadow:0 2px 4px rgba(20,23,28,.04), 0 14px 32px rgba(20,23,28,.08);
+    --shadow-lift:0 6px 12px rgba(20,23,28,.08), 0 28px 56px rgba(20,23,28,.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  .display{font-family:'Barlow Condensed',sans-serif;}
+  a{text-decoration:none;color:inherit}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1320px;margin:0 auto;padding:0 48px}
+
+  /* ===== TOPBAR ===== */
+  .topbar{
+    background:var(--ink);
+    color:#C7CACE;
+    font-size:12.5px;
+    letter-spacing:.02em;
+  }
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:38px}
+  .topbar .ti{display:flex;gap:22px;align-items:center}
+  .topbar .ti span{display:flex;gap:7px;align-items:center}
+  .topbar .red{color:var(--red);font-weight:700}
+  .locale{display:flex;gap:14px;align-items:center}
+  .locale a{position:relative;padding-bottom:1px}
+  .locale a.on{color:#fff;font-weight:600}
+  .locale .sep{opacity:.35}
+
+  /* ===== NAV ===== */
+  .nav{
+    position:absolute;top:38px;left:0;right:0;z-index:30;
+  }
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:30px;letter-spacing:.02em;line-height:1}
+  .brand .m{color:var(--red)}
+  .navlinks{display:flex;gap:34px;align-items:center}
+  .navlinks a{font-size:14.5px;font-weight:500;color:var(--ink);letter-spacing:.01em;transition:color .2s}
+  .navlinks a:hover{color:var(--red)}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    font-weight:600;font-size:14.5px;letter-spacing:.01em;
+    padding:12px 22px;border-radius:2px;
+    transition:transform .2s, box-shadow .2s, background .2s;
+  }
+  .btn-red{background:var(--red);color:#fff}
+  .btn-red:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(200,16,46,.32)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+
+  /* ===== HERO ===== */
+  .hero{height:100vh;overflow:hidden;display:flex;position:relative}
+  .hero-left{
+    width:48%;background:var(--paper);
+    display:flex;flex-direction:column;justify-content:center;
+    padding:0 64px 0 max(48px, calc((100vw - 1320px)/2 + 48px));
+    position:relative;z-index:5;
+  }
+  .hero-right{
+    width:52%;position:relative;overflow:hidden;
+    border-left:3px solid var(--red);
+  }
+  .hero-right img{
+    width:100%;height:100%;object-fit:cover;
+    filter:contrast(1.06) saturate(1.08);
+  }
+  .hero-right::after{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(120% 90% at 60% 40%, rgba(0,0,0,0) 55%, rgba(0,0,0,.28) 100%);
+    pointer-events:none;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--sec);margin-bottom:24px;
+  }
+  .eyebrow::before{content:"";width:28px;height:2px;background:var(--red)}
+  .hl{
+    font-family:'Barlow Condensed',sans-serif;font-weight:900;
+    text-transform:uppercase;line-height:.92;letter-spacing:-.01em;
+    font-size:clamp(48px,5.3vw,76px);
+    margin-bottom:24px;
+  }
+  .hl .r{color:var(--red)}
+  .hl .g{color:#9AA0A6}
+  .sub{
+    font-size:16.5px;color:var(--sec);max-width:440px;line-height:1.62;
+    margin-bottom:32px;
+  }
+  .cta-row{display:flex;gap:14px;margin-bottom:34px;flex-wrap:wrap}
+  .trust{
+    display:flex;gap:18px;align-items:center;flex-wrap:wrap;
+    padding-top:22px;border-top:1px solid var(--line);
+  }
+  .trust span{
+    font-size:12.5px;font-weight:500;color:var(--sec);
+    display:flex;align-items:center;gap:8px;letter-spacing:.01em;
+  }
+  .trust span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--red);flex:none}
+
+  /* ===== STATS ===== */
+  .stats-sec{padding:0 0 96px;margin-top:-58px;position:relative;z-index:10}
+  .stats{
+    background:var(--card);border-radius:4px;box-shadow:var(--shadow);
+    display:grid;grid-template-columns:repeat(4,1fr);
+    border:1px solid var(--line);
+  }
+  .stat{padding:38px 36px;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:none}
+  .stat .num{
+    font-family:'Barlow Condensed',sans-serif;font-weight:900;
+    font-size:58px;line-height:.9;letter-spacing:-.01em;margin-bottom:10px;
+  }
+  .stat .num .acc{color:var(--red)}
+  .stat .lbl{font-size:15px;font-weight:700;margin-bottom:5px}
+  .stat .d{font-size:13px;color:var(--sec);line-height:1.45}
+
+  /* ===== SECTION HEADER ===== */
+  .sec-head{margin-bottom:48px;max-width:640px}
+  .sec-eyebrow{
+    font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--red);margin-bottom:16px;display:inline-flex;align-items:center;gap:10px;
+  }
+  .sec-eyebrow::before{content:"";width:28px;height:2px;background:var(--red)}
+  .sec-title{
+    font-family:'Barlow Condensed',sans-serif;font-weight:900;text-transform:uppercase;
+    font-size:clamp(36px,4vw,56px);line-height:.96;letter-spacing:-.01em;
+  }
+
+  /* ===== INDUSTRIES ===== */
+  .industries{padding:30px 0 100px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .ic{
+    position:relative;border-radius:4px;overflow:hidden;height:340px;
+    box-shadow:var(--shadow);cursor:pointer;
+    transition:transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s;
+  }
+  .ic:hover{transform:translateY(-6px);box-shadow:var(--shadow-lift)}
+  .ic img{
+    width:100%;height:100%;object-fit:cover;
+    filter:contrast(1.05) saturate(1.06);
+    transition:transform .6s cubic-bezier(.2,.7,.2,1);
+  }
+  .ic:hover img{transform:scale(1.07)}
+  .ic .ov{
+    position:absolute;inset:0;
+    background:linear-gradient(to top, rgba(10,12,15,.86) 0%, rgba(10,12,15,.45) 26%, rgba(10,12,15,0) 52%);
+  }
+  .ic .txt{position:absolute;left:24px;right:24px;bottom:22px;color:#fff}
+  .ic .tag{
+    font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    color:#FF6079;margin-bottom:8px;
+  }
+  .ic .t{font-family:'Barlow Condensed',sans-serif;font-weight:900;text-transform:uppercase;font-size:28px;line-height:1;margin-bottom:7px}
+  .ic .d{font-size:13px;color:rgba(255,255,255,.82);line-height:1.4}
+
+  /* ===== PROCESS ===== */
+  .process{padding:30px 0 100px}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;position:relative;margin-top:14px}
+  .steps::before{
+    content:"";position:absolute;top:13px;left:6%;right:6%;height:1px;background:var(--line);z-index:0;
+  }
+  .step{position:relative;z-index:1}
+  .step .node{
+    width:14px;height:14px;border-radius:50%;background:var(--red);
+    margin-bottom:26px;box-shadow:0 0 0 5px var(--paper), 0 0 0 6px var(--line);
+  }
+  .step .n{
+    font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:46px;
+    color:var(--red);line-height:.9;margin-bottom:12px;letter-spacing:-.01em;
+  }
+  .step .t{font-size:18px;font-weight:700;margin-bottom:10px}
+  .step .d{font-size:14px;color:var(--sec);line-height:1.55}
+
+  /* ===== CTA BAND ===== */
+  .cta-band{background:var(--red);color:#fff}
+  .cta-band .wrap{padding:74px 48px;text-align:center}
+  .cta-band .lbl{
+    font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    color:rgba(255,255,255,.78);margin-bottom:18px;
+  }
+  .cta-band h2{
+    font-family:'Barlow Condensed',sans-serif;font-weight:900;text-transform:uppercase;
+    font-size:clamp(38px,4.4vw,60px);line-height:.98;letter-spacing:-.01em;margin-bottom:18px;
+  }
+  .cta-band p{font-size:16px;color:rgba(255,255,255,.9);max-width:600px;margin:0 auto 32px}
+  .cta-band .acts{display:flex;gap:18px;justify-content:center;align-items:center;flex-wrap:wrap}
+  .btn-white{background:#fff;color:var(--red)}
+  .btn-white:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.22)}
+  .cta-phone{font-size:19px;font-weight:700;color:#fff;letter-spacing:.01em}
+  .cta-phone span{opacity:.7;font-weight:500;font-size:14px;display:block;margin-bottom:2px}
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--ink);color:#C7CACE}
+  footer .wrap{padding:74px 48px 36px}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .foot-brand .brand{font-size:34px;margin-bottom:18px}
+  .foot-brand p{font-size:14px;color:#969BA1;line-height:1.65;max-width:340px}
+  .foot-col h4{
+    font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    color:#fff;margin-bottom:18px;
+  }
+  .foot-col a, .foot-col p{display:block;font-size:14px;color:#969BA1;margin-bottom:12px;transition:color .2s}
+  .foot-col a:hover{color:#fff}
+  .foot-bot{display:flex;justify-content:space-between;align-items:center;padding-top:28px;font-size:13px;color:#7A7F86}
+  .foot-bot .red{color:var(--red)}
+</style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="wrap">
+      <div class="ti">
+        <span class="red">info@primet.lv</span>
+        <span>P–Pk</span>
+        <span>08:00–17:00</span>
+      </div>
+      <div class="locale">
+        <a class="on">LV</a><span class="sep">/</span>
+        <a>EN</a><span class="sep">/</span>
+        <a>RU</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="wrap">
+      <div class="brand">PRI<span class="m">MET</span></div>
+      <div class="navlinks">
+        <a href="#">Iekārtas</a>
+        <a href="#">Procesi</a>
+        <a href="#">Par mums</a>
+        <a href="#">Serviss</a>
+        <a href="#" class="btn btn-red">Sazināties</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="eyebrow">Rūpniecisko iekārtu ražošana · kopš 2015</div>
+      <h1 class="hl">
+        Ražojam<br>
+        iekārtas.<br>
+        <span class="r">Risinām</span><br>
+        <span class="g">problēmas.</span>
+      </h1>
+      <p class="sub">Individuāli konstruētas iekārtas pārtikas rūpniecībai un metālapstrādei. 300+ realizēti projekti Latvijā un Baltijā.</p>
+      <div class="cta-row">
+        <a href="#" class="btn btn-red">Pieteikties konsultācijai</a>
+        <a href="#" class="btn btn-ghost">Skatīt iekārtas →</a>
+      </div>
+      <div class="trust">
+        <span>HACCP sertificēts</span>
+        <span>Nerūsējošais tērauds</span>
+        <span>Latvijas ražotājs</span>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="/photos/hero1.jpg" alt="Primet ražotne">
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-sec">
+    <div class="wrap">
+      <div class="stats">
+        <div class="stat">
+          <div class="num">300<span class="acc">+</span></div>
+          <div class="lbl">Realizēti projekti</div>
+          <div class="d">Pabeigtas iekārtas Latvijā un Baltijā.</div>
+        </div>
+        <div class="stat">
+          <div class="num">11</div>
+          <div class="lbl">Gadi nozarē</div>
+          <div class="d">Pieredze kopš 2015. gada.</div>
+        </div>
+        <div class="stat">
+          <div class="num">6<span class="acc">+</span></div>
+          <div class="lbl">Nozares</div>
+          <div class="d">No zivīm līdz metālapstrādei.</div>
+        </div>
+        <div class="stat">
+          <div class="num">24<span class="acc">/</span>7</div>
+          <div class="lbl">Servisa atbalsts</div>
+          <div class="d">Tehniskā palīdzība jebkurā laikā.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section class="industries">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-eyebrow">Pielietojums</div>
+        <h2 class="sec-title">Iekārtas katrai nozarei</h2>
+      </div>
+      <div class="grid">
+        <a class="ic">
+          <img src="/photos/ind-fish.jpg" alt="Zivju nozare">
+          <div class="ov"></div>
+          <div class="txt">
+            <div class="tag">Pārtika</div>
+            <div class="t">Zivju nozare</div>
+            <div class="d">Šķirošana · filēšana · fasēšana · CIP</div>
+          </div>
+        </a>
+        <a class="ic">
+          <img src="/photos/ind-meat.jpg" alt="Gaļas nozare">
+          <div class="ov"></div>
+          <div class="txt">
+            <div class="tag">Pārtika</div>
+            <div class="t">Gaļas nozare</div>
+            <div class="d">Griešana · dozēšana · vakuumiepakošana</div>
+          </div>
+        </a>
+        <a class="ic">
+          <img src="/photos/ind-dairy.jpg" alt="Piena nozare">
+          <div class="ov"></div>
+          <div class="txt">
+            <div class="tag">Pārtika</div>
+            <div class="t">Piena nozare</div>
+            <div class="d">Pildīšana · sterilizācija · CIP/SIP</div>
+          </div>
+        </a>
+        <a class="ic">
+          <img src="/photos/ind-veg.jpg" alt="Dārzeņu nozare">
+          <div class="ov"></div>
+          <div class="txt">
+            <div class="tag">Pārtika</div>
+            <div class="t">Dārzeņu nozare</div>
+            <div class="d">Mazgāšana · šķirošana · dozēšana</div>
+          </div>
+        </a>
+        <a class="ic">
+          <img src="/photos/ind-cosm.jpg" alt="Kosmētika">
+          <div class="ov"></div>
+          <div class="txt">
+            <div class="tag">Farmācija</div>
+            <div class="t">Kosmētika</div>
+            <div class="d">Tīrās telpas · pildīšana · marķēšana</div>
+          </div>
+        </a>
+        <a class="ic">
+          <img src="/photos/ind-metal.jpg" alt="Metālapstrāde">
+          <div class="ov"></div>
+          <div class="txt">
+            <div class="tag">Industrija</div>
+            <div class="t">Metālapstrāde</div>
+            <div class="d">Konstruēšana · CNC · montāža</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-eyebrow">Mūsu pieeja</div>
+        <h2 class="sec-title">No idejas līdz iekārtai</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="node"></div>
+          <div class="n">01</div>
+          <div class="t">Konsultācija</div>
+          <div class="d">Iepazīstamies ar ražošanas procesu, noskaidrojam prasības un sagatavojam tehniski ekonomisko pamatojumu.</div>
+        </div>
+        <div class="step">
+          <div class="node"></div>
+          <div class="n">02</div>
+          <div class="t">Projektēšana</div>
+          <div class="d">3D modelēšana un rasējumi saskaņā ar klienta prasībām.</div>
+        </div>
+        <div class="step">
+          <div class="node"></div>
+          <div class="n">03</div>
+          <div class="t">Ražošana</div>
+          <div class="d">Izgatavošana savā ražotnē no AISI 304/316 nerūsējošā tērauda. Kvalitātes kontrole katrā posmā.</div>
+        </div>
+        <div class="step">
+          <div class="node"></div>
+          <div class="n">04</div>
+          <div class="t">Uzstādīšana un serviss</div>
+          <div class="d">Piegāde, montāža, darbinieku apmācība un 24/7 tehniskais atbalsts.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="wrap">
+      <div class="lbl">Sāciet projektu šodien</div>
+      <h2>Gatavi uzsākt jūsu projektu?</h2>
+      <p>Bezmaksas konsultācija · Tehniskais pamatojums · Piegāde Latvijā un Baltijā</p>
+      <div class="acts">
+        <a href="#" class="btn btn-white">Pieteikties konsultācijai</a>
+        <a href="tel:+37126123456" class="cta-phone"><span>Zvaniet mums</span>+371 26 123 456</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <div class="brand">PRI<span class="m">MET</span></div>
+          <p>SIA Primet — industriālo iekārtu konstruēšana un ražošana pārtikas un farmācijas nozarei kopš 2015. gada.</p>
+        </div>
+        <div class="foot-col">
+          <h4>Iekārtas</h4>
+          <a href="#">Zivju nozare</a>
+          <a href="#">Gaļas nozare</a>
+          <a href="#">Piena nozare</a>
+          <a href="#">Metālapstrāde</a>
+        </div>
+        <div class="foot-col">
+          <h4>Uzņēmums</h4>
+          <a href="#">Par mums</a>
+          <a href="#">Procesi</a>
+          <a href="#">Serviss</a>
+          <a href="#">Karjera</a>
+        </div>
+        <div class="foot-col">
+          <h4>Kontakti</h4>
+          <p>info@primet.lv</p>
+          <p>+371 26 123 456</p>
+          <p>P–Pk · 08:00–17:00</p>
+          <p>Latvija</p>
+        </div>
+      </div>
+      <div class="foot-bot">
+        <div>© 2025 SIA Primet · Latvija</div>
+        <div>HACCP sertificēts · <span class="red">Latvijas ražotājs</span></div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

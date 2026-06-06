@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url>
+<loc>https://primet.lv/lv</loc>
+<xhtml:link rel="alternate" hreflang="lv" href="https://primet.lv/lv" />
+<xhtml:link rel="alternate" hreflang="en" href="https://primet.lv/en" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://primet.lv/ru" />
+<changefreq>monthly</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>https://primet.lv/lv/iekartas</loc>
+<xhtml:link rel="alternate" hreflang="lv" href="https://primet.lv/lv/iekartas" />
+<xhtml:link rel="alternate" hreflang="en" href="https://primet.lv/en/iekartas" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://primet.lv/ru/iekartas" />
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://primet.lv/lv/procesi</loc>
+<xhtml:link rel="alternate" hreflang="lv" href="https://primet.lv/lv/procesi" />
+<xhtml:link rel="alternate" hreflang="en" href="https://primet.lv/en/procesi" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://primet.lv/ru/procesi" />
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://primet.lv/lv/par-mums</loc>
+<xhtml:link rel="alternate" hreflang="lv" href="https://primet.lv/lv/par-mums" />
+<xhtml:link rel="alternate" hreflang="en" href="https://primet.lv/en/par-mums" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://primet.lv/ru/par-mums" />
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://primet.lv/lv/serviss</loc>
+<xhtml:link rel="alternate" hreflang="lv" href="https://primet.lv/lv/serviss" />
+<xhtml:link rel="alternate" hreflang="en" href="https://primet.lv/en/serviss" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://primet.lv/ru/serviss" />
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://primet.lv/lv/kontakti</loc>
+<xhtml:link rel="alternate" hreflang="lv" href="https://primet.lv/lv/kontakti" />
+<xhtml:link rel="alternate" hreflang="en" href="https://primet.lv/en/kontakti" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://primet.lv/ru/kontakti" />
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://primet.lv/en</loc>
+<xhtml:link rel="alternate" hreflang="lv" href="https://primet.lv/lv" />
+<xhtml:link rel="alternate" hreflang="en" href="https://primet.lv/en" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://primet.lv/ru" />
+<changefreq>monthly</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>https://primet.lv/en/iekartas</loc>
+<xhtml:link rel="alternate" hreflang="lv" href="https://primet.lv/lv/iekartas" />
+<xhtml:link rel="alternate" hreflang="en" href="https://primet.lv/en/iekartas" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://primet.lv/ru/iekartas" />
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://primet.lv/en/procesi</loc>
+<xhtml:link rel="alternate" hreflang="lv" href="https://primet.lv/lv/procesi" />
+<xhtml:link rel="alternate" hreflang="en" href="https://primet.lv/en/procesi" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://primet.lv/ru/procesi" />
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://primet.lv/en/par-mums</loc>
+<xhtml:link rel="alternate" hreflang="lv" href="https://primet.lv/lv/par-mums" />
+<xhtml:link rel="alternate" hreflang="en" href="https://primet.lv/en/par-mums" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://primet.lv/ru/par-mums" />
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://primet.lv/en/serviss</loc>
+<xhtml:link rel="alternate" hreflang="lv" href="https://primet.lv/lv/serviss" />
+<xhtml:link rel="alternate" hreflang="en" href="https://primet.lv/en/serviss" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://primet.lv/ru/serviss" />
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://primet.lv/en/kontakti</loc>
+<xhtml:link rel="alternate" hreflang="lv" href="https://primet.lv/lv/kontakti" />
+<xhtml:link rel="alternate" hreflang="en" href="https://primet.lv/en/kontakti" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://primet.lv/ru/kontakti" />
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://primet.lv/ru</loc>
+<xhtml:link rel="alternate" hreflang="lv" href="https://primet.lv/lv" />
+<xhtml:link rel="alternate" hreflang="en" href="https://primet.lv/en" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://primet.lv/ru" />
+<changefreq>monthly</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>https://primet.lv/ru/iekartas</loc>
+<xhtml:link rel="alternate" hreflang="lv" href="https://primet.lv/lv/iekartas" />
+<xhtml:link rel="alternate" hreflang="en" href="https://primet.lv/en/iekartas" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://primet.lv/ru/iekartas" />
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://primet.lv/ru/procesi</loc>
+<xhtml:link rel="alternate" hreflang="lv" href="https://primet.lv/lv/procesi" />
+<xhtml:link rel="alternate" hreflang="en" href="https://primet.lv/en/procesi" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://primet.lv/ru/procesi" />
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://primet.lv/ru/par-mums</loc>
+<xhtml:link rel="alternate" hreflang="lv" href="https://primet.lv/lv/par-mums" />
+<xhtml:link rel="alternate" hreflang="en" href="https://primet.lv/en/par-mums" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://primet.lv/ru/par-mums" />
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://primet.lv/ru/serviss</loc>
+<xhtml:link rel="alternate" hreflang="lv" href="https://primet.lv/lv/serviss" />
+<xhtml:link rel="alternate" hreflang="en" href="https://primet.lv/en/serviss" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://primet.lv/ru/serviss" />
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://primet.lv/ru/kontakti</loc>
+<xhtml:link rel="alternate" hreflang="lv" href="https://primet.lv/lv/kontakti" />
+<xhtml:link rel="alternate" hreflang="en" href="https://primet.lv/en/kontakti" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://primet.lv/ru/kontakti" />
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+</urlset>

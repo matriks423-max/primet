@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="lv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primet — Logo Concepts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14171C; --paper:#F4F2EC; --graphite:#16181C; --muted:#6A6F77;
+    --red:#C8102E; --line:rgba(20,23,28,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
+  header{padding:48px 56px 24px;border-bottom:1px solid var(--line)}
+  header .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+  header h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:46px;text-transform:uppercase;letter-spacing:-.01em;line-height:.95}
+  header p{margin-top:12px;color:var(--muted);max-width:680px;font-size:14px;line-height:1.6}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+  .cell{background:var(--paper);padding:40px 48px}
+  .cell .idx{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase;margin-bottom:4px;display:flex;justify-content:space-between}
+  .cell .idx b{color:var(--red);font-weight:500}
+  .cell h2{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:26px;text-transform:uppercase;letter-spacing:.01em;margin-bottom:6px}
+  .cell .note{font-size:12.5px;color:var(--muted);line-height:1.5;margin-bottom:26px;max-width:440px}
+  .previews{display:flex;gap:1px;background:var(--line);border:1px solid var(--line)}
+  .pv{flex:1;display:flex;align-items:center;justify-content:center;padding:34px 20px;min-height:140px}
+  .pv.light{background:#FCFBF8}
+  .pv.dark{background:var(--graphite)}
+  .pv.red{background:var(--red)}
+  .lockup{display:flex;align-items:center;gap:14px}
+  .wm{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:30px;letter-spacing:.04em;text-transform:uppercase;line-height:1}
+  .wm .pri{color:var(--ink)} .wm .met{color:var(--red)}
+  .dark .wm .pri{color:#fff}
+  .red .wm .pri{color:#fff} .red .wm .met{color:#14171C}
+  .sub{font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+  .dark .sub{color:rgba(255,255,255,.45)} .red .sub{color:rgba(255,255,255,.7)}
+  .stack{display:flex;flex-direction:column}
+  svg{display:block;flex-shrink:0}
+  .favs{display:flex;gap:10px;align-items:center;margin-top:18px}
+  .favs span{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+  footer{padding:40px 56px;color:var(--muted);font-size:13px;font-family:'IBM Plex Mono',monospace;letter-spacing:.05em}
+  .ink-fill{fill:var(--ink)} .red-fill{fill:var(--red)} .white-fill{fill:#fff}
+</style>
+</head>
+<body>
+<header>
+  <div class="tag">Primet · Logo Concepts · 2026</div>
+  <h1>Jauns logotips — 6 virzieni</h1>
+  <p>Metālapstrādes / iekārtu ražotājam. Katrs koncepts parādīts uz gaišā, tumšā un sarkanā fona + favicon izmērā. PRIMET = PRI · MET (metāls). Izvēlies numuru.</p>
+</header>
+
+<div class="grid">
+
+  <!-- 1 HEX BOLT -->
+  <div class="cell">
+    <div class="idx"><span>Concept 01</span><b>HEX · FASTENER</b></div>
+    <h2>Hex Bolt P</h2>
+    <div class="note">Sešstūris = uzgrieznis/skrūve — tiešs metālapstrādes simbols. Negatīvā telpā burts P, sarkans signāla griezums augšā. Spēcīgs, rūpniecisks.</div>
+    <div class="previews">
+      <div class="pv light"><div class="lockup">
+        <svg width="56" height="56" viewBox="0 0 100 100"><polygon points="92,50 71,86.4 29,86.4 8,50 29,13.6 71,13.6" class="ink-fill"/><text x="50" y="68" text-anchor="middle" font-family="Barlow Condensed" font-weight="900" font-size="56" class="white-fill">P</text><polygon points="71,13.6 92,50 80,50 63,20" class="red-fill"/></svg>
+        <div class="stack"><div class="wm"><span class="pri">PRI</span><span class="met">MET</span></div><div class="sub">Ražošanas iekārtas</div></div>
+      </div></div>
+      <div class="pv dark"><div class="lockup">
+        <svg width="56" height="56" viewBox="0 0 100 100"><polygon points="92,50 71,86.4 29,86.4 8,50 29,13.6 71,13.6" fill="#fff"/><text x="50" y="68" text-anchor="middle" font-family="Barlow Condensed" font-weight="900" font-size="56" fill="#16181C">P</text><polygon points="71,13.6 92,50 80,50 63,20" class="red-fill"/></svg>
+        <div class="stack"><div class="wm"><span class="pri">PRI</span><span class="met">MET</span></div><div class="sub">Ražošanas iekārtas</div></div>
+      </div></div>
+      <div class="pv red"><svg width="48" height="48" viewBox="0 0 100 100"><polygon points="92,50 71,86.4 29,86.4 8,50 29,13.6 71,13.6" fill="#fff"/><text x="50" y="68" text-anchor="middle" font-family="Barlow Condensed" font-weight="900" font-size="56" fill="#C8102E">P</text></svg></div>
+    </div>
+    <div class="favs"><svg width="28" height="28" viewBox="0 0 100 100"><polygon points="92,50 71,86.4 29,86.4 8,50 29,13.6 71,13.6" class="ink-fill"/><text x="50" y="68" text-anchor="middle" font-family="Barlow Condensed" font-weight="900" font-size="56" class="white-fill">P</text></svg><span>favicon 28px</span></div>
+  </div>
+
+  <!-- 2 CHAMFER -->
+  <div class="cell">
+    <div class="idx"><span>Concept 02</span><b>MACHINED · CHAMFER</b></div>
+    <h2>Chamfer P</h2>
+    <div class="note">Burts P ar nofrēzētu (chamfer) stūri — CNC apstrādes detaļa. Sarkans 45° griezums kā instrumenta pēda. Moderns, precīzs.</div>
+    <div class="previews">
+      <div class="pv light"><div class="lockup">
+        <svg width="54" height="54" viewBox="0 0 100 100"><path d="M22 14 H62 L82 34 V52 H40 V86 H22 Z" class="ink-fill"/><rect x="40" y="30" width="26" height="14" fill="#FCFBF8"/><polygon points="62,14 82,34 62,34" class="red-fill"/></svg>
+        <div class="stack"><div class="wm"><span class="pri">PRI</span><span class="met">MET</span></div><div class="sub">Ražošanas iekārtas</div></div>
+      </div></div>
+      <div class="pv dark"><div class="lockup">
+        <svg width="54" height="54" viewBox="0 0 100 100"><path d="M22 14 H62 L82 34 V52 H40 V86 H22 Z" fill="#fff"/><rect x="40" y="30" width="26" height="14" fill="#16181C"/><polygon points="62,14 82,34 62,34" class="red-fill"/></svg>
+        <div class="stack"><div class="wm"><span class="pri">PRI</span><span class="met">MET</span></div><div class="sub">Ražošanas iekārtas</div></div>
+      </div></div>
+      <div class="pv red"><svg width="46" height="46" viewBox="0 0 100 100"><path d="M22 14 H62 L82 34 V52 H40 V86 H22 Z" fill="#fff"/><rect x="40" y="30" width="26" height="14" fill="#C8102E"/></svg></div>
+    </div>
+    <div class="favs"><svg width="28" height="28" viewBox="0 0 100 100"><path d="M22 14 H62 L82 34 V52 H40 V86 H22 Z" class="ink-fill"/><rect x="40" y="30" width="26" height="14" fill="#FCFBF8"/><polygon points="62,14 82,34 62,34" class="red-fill"/></svg><span>favicon 28px</span></div>
+  </div>
+
+  <!-- 3 FOLD -->
+  <div class="cell">
+    <div class="idx"><span>Concept 03</span><b>SHEET · FOLD</b></div>
+    <h2>Folded Steel</h2>
+    <div class="note">Salocīta tērauda loksne — divas slīpas plaknes veido „M" / bultu uz augšu. Sarkana locījuma šķautne. Kustība + materiāls.</div>
+    <div class="previews">
+      <div class="pv light"><div class="lockup">
+        <svg width="56" height="56" viewBox="0 0 100 100"><polygon points="14,82 40,18 50,18 50,82 36,82 36,44 26,82" class="ink-fill"/><polygon points="50,18 60,18 86,82 64,82 50,46" class="ink-fill"/><polygon points="50,18 60,18 56,30 50,30" class="red-fill"/></svg>
+        <div class="stack"><div class="wm"><span class="pri">PRI</span><span class="met">MET</span></div><div class="sub">Ražošanas iekārtas</div></div>
+      </div></div>
+      <div class="pv dark"><div class="lockup">
+        <svg width="56" height="56" viewBox="0 0 100 100"><polygon points="14,82 40,18 50,18 50,82 36,82 36,44 26,82" fill="#fff"/><polygon points="50,18 60,18 86,82 64,82 50,46" fill="#fff"/><polygon points="50,18 60,18 56,30 50,30" class="red-fill"/></svg>
+        <div class="stack"><div class="wm"><span class="pri">PRI</span><span class="met">MET</span></div><div class="sub">Ražošanas iekārtas</div></div>
+      </div></div>
+      <div class="pv red"><svg width="48" height="48" viewBox="0 0 100 100"><polygon points="14,82 40,18 50,18 50,82 36,82 36,44 26,82" fill="#fff"/><polygon points="50,18 60,18 86,82 64,82 50,46" fill="#fff"/></svg></div>
+    </div>
+    <div class="favs"><svg width="28" height="28" viewBox="0 0 100 100"><polygon points="14,82 40,18 50,18 50,82 36,82 36,44 26,82" class="ink-fill"/><polygon points="50,18 60,18 86,82 64,82 50,46" class="ink-fill"/><polygon points="50,18 60,18 56,30 50,30" class="red-fill"/></svg><span>favicon 28px</span></div>
+  </div>
+
+  <!-- 4 BRACKET TECH -->
+  <div class="cell">
+    <div class="idx"><span>Concept 04</span><b>BLUEPRINT · BRACKET</b></div>
+    <h2>Machined Bracket</h2>
+    <div class="note">Apstrādes krustpunktu / griešanas atzīmes ap monogrammu PM. Inženiertehnisks, der „Blueprint" stilam. Mono burti.</div>
+    <div class="previews">
+      <div class="pv light"><div class="lockup">
+        <svg width="58" height="58" viewBox="0 0 100 100"><g stroke="#14171C" stroke-width="5" fill="none"><path d="M10 26 V10 H26"/><path d="M74 10 H90 V26"/><path d="M90 74 V90 H74"/><path d="M26 90 H10 V74"/></g><text x="50" y="63" text-anchor="middle" font-family="Barlow Condensed" font-weight="900" font-size="40" class="ink-fill">PM</text><rect x="46" y="72" width="8" height="8" class="red-fill"/></svg>
+        <div class="stack"><div class="wm"><span class="pri">PRI</span><span class="met">MET</span></div><div class="sub">Ražošanas iekārtas</div></div>
+      </div></div>
+      <div class="pv dark"><div class="lockup">
+        <svg width="58" height="58" viewBox="0 0 100 100"><g stroke="#fff" stroke-width="5" fill="none"><path d="M10 26 V10 H26"/><path d="M74 10 H90 V26"/><path d="M90 74 V90 H74"/><path d="M26 90 H10 V74"/></g><text x="50" y="63" text-anchor="middle" font-family="Barlow Condensed" font-weight="900" font-size="40" fill="#fff">PM</text><rect x="46" y="72" width="8" height="8" class="red-fill"/></svg>
+        <div class="stack"><div class="wm"><span class="pri">PRI</span><span class="met">MET</span></div><div class="sub">Ražošanas iekārtas</div></div>
+      </div></div>
+      <div class="pv red"><svg width="50" height="50" viewBox="0 0 100 100"><g stroke="#fff" stroke-width="5" fill="none"><path d="M10 26 V10 H26"/><path d="M74 10 H90 V26"/><path d="M90 74 V90 H74"/><path d="M26 90 H10 V74"/></g><text x="50" y="63" text-anchor="middle" font-family="Barlow Condensed" font-weight="900" font-size="40" fill="#fff">PM</text></svg></div>
+    </div>
+    <div class="favs"><svg width="28" height="28" viewBox="0 0 100 100"><g stroke="#14171C" stroke-width="6" fill="none"><path d="M10 26 V10 H26"/><path d="M74 10 H90 V26"/><path d="M90 74 V90 H74"/><path d="M26 90 H10 V74"/></g><text x="50" y="64" text-anchor="middle" font-family="Barlow Condensed" font-weight="900" font-size="40" class="ink-fill">PM</text></svg><span>favicon 28px</span></div>
+  </div>
+
+  <!-- 5 MONOGRAM -->
+  <div class="cell">
+    <div class="idx"><span>Concept 05</span><b>MONOGRAM · SOLID</b></div>
+    <h2>PM Block</h2>
+    <div class="note">Iekalts P+M monogrammas bloks ar sarkanu vertikālu šķēlumu — solīds, korporatīvs zīmols. Labi mērogojas līdz favicon.</div>
+    <div class="previews">
+      <div class="pv light"><div class="lockup">
+        <svg width="56" height="56" viewBox="0 0 100 100"><rect x="10" y="12" width="80" height="76" class="ink-fill"/><text x="50" y="68" text-anchor="middle" font-family="Barlow Condensed" font-weight="900" font-size="52" class="white-fill" letter-spacing="-2">PM</text><rect x="48" y="12" width="4" height="76" class="red-fill"/></svg>
+        <div class="stack"><div class="wm"><span class="pri">PRI</span><span class="met">MET</span></div><div class="sub">Ražošanas iekārtas</div></div>
+      </div></div>
+      <div class="pv dark"><div class="lockup">
+        <svg width="56" height="56" viewBox="0 0 100 100"><rect x="10" y="12" width="80" height="76" fill="#fff"/><text x="50" y="68" text-anchor="middle" font-family="Barlow Condensed" font-weight="900" font-size="52" fill="#16181C" letter-spacing="-2">PM</text><rect x="48" y="12" width="4" height="76" class="red-fill"/></svg>
+        <div class="stack"><div class="wm"><span class="pri">PRI</span><span class="met">MET</span></div><div class="sub">Ražošanas iekārtas</div></div>
+      </div></div>
+      <div class="pv red"><svg width="48" height="48" viewBox="0 0 100 100"><rect x="10" y="12" width="80" height="76" fill="#fff"/><text x="50" y="68" text-anchor="middle" font-family="Barlow Condensed" font-weight="900" font-size="52" fill="#C8102E" letter-spacing="-2">PM</text></svg></div>
+    </div>
+    <div class="favs"><svg width="28" height="28" viewBox="0 0 100 100"><rect x="10" y="12" width="80" height="76" class="ink-fill"/><text x="50" y="68" text-anchor="middle" font-family="Barlow Condensed" font-weight="900" font-size="52" class="white-fill" letter-spacing="-2">PM</text><rect x="48" y="12" width="4" height="76" class="red-fill"/></svg><span>favicon 28px</span></div>
+  </div>
+
+  <!-- 6 WORDMARK NOTCH -->
+  <div class="cell">
+    <div class="idx"><span>Concept 06</span><b>WORDMARK · NOTCH</b></div>
+    <h2>Signal Notch</h2>
+    <div class="note">Bez atsevišķas zīmes — tikai uzlabots wordmark: sarkans reģistrācijas kvadrāts un nofrēzēts „E" iegriezums. Tīrs, mūsdienīgs, viegli lietojams.</div>
+    <div class="previews">
+      <div class="pv light"><div class="stack" style="align-items:flex-start">
+        <div style="display:flex;align-items:center;gap:8px"><span class="wm" style="font-size:40px"><span class="pri">PRIM</span><span class="met">E</span><span class="pri">T</span></span><span style="width:9px;height:9px;background:var(--red);display:inline-block;margin-bottom:18px"></span></div>
+        <div class="sub" style="margin-top:6px">Ražošanas iekārtas · EST 2015</div>
+      </div></div>
+      <div class="pv dark"><div class="stack" style="align-items:flex-start">
+        <div style="display:flex;align-items:center;gap:8px"><span class="wm" style="font-size:40px"><span class="pri">PRIM</span><span class="met">E</span><span class="pri">T</span></span><span style="width:9px;height:9px;background:var(--red);display:inline-block;margin-bottom:18px"></span></div>
+        <div class="sub" style="margin-top:6px">Ražošanas iekārtas · EST 2015</div>
+      </div></div>
+      <div class="pv red"><span class="wm" style="font-size:38px"><span class="pri">PRI</span><span style="color:#14171C">MET</span></span></div>
+    </div>
+    <div class="favs"><span style="font-family:'Barlow Condensed';font-weight:900;font-size:24px"><span style="color:#14171C">P</span><span style="color:#C8102E">M</span></span><span>+ red square mark</span></div>
+  </div>
+
+</div>
+<footer>SELECT 01–06 · marks are vector SVG, scale to any size · pairs with chosen site style</footer>
+</body>
+</html>
